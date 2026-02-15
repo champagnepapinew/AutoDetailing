@@ -14,12 +14,12 @@ Logo (Vector Graphic)
 The website logo (logo.svg) was created by me as an SVG vector file to ensure scalability and proper web optimization.
 
 Video
-The promotional video (promo.mp4) was edited by me and includes audio, basic transitions, and structured sections (intro, main content, outro).
+The promotional video (promo.mp4) was edited by me and includes audio, basic transitions, and structured sections.
 
 Technical Details
 
 The website consists of multiple pages (Home, Services, Projects, Pricing, About, Contact).
-It was built using HTML5, CSS3 and JavaScript.
+It was built using HTML, CSS and JS.
 A custom image slider is implemented on the Projects page.
 The layout is responsive and works on desktop and mobile devices.
 
@@ -31,6 +31,6 @@ projects.html – Portfolio with gallery and video
 pricing.html – Pricing information
 about.html – Company details
 contact.html – Contact form
-assets/css/style.css – Stylesheet
-images/ – Edited photos and logo
-video/ – Promotional video
+style.css – Stylesheet
+images – Edited photos and logo
+video – Promotional video
