@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | AutoDetail Pro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container top">
+    <a class="logo" href="index.html" aria-label="Home">
+      <img src="images/projects/logo/logo.svg" alt="AutoDetail Pro logo" class="logo-img">
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Projects</h1>
+    <p class="page-lead">Recent transformations and premium detailing results.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>BMW M8 + Audi RS4</h2>
+        <p>Performance detailing: exterior finish + interior refresh.</p>
+
+        <div class="slider" data-slider>
+          <button class="navBtn prev" type="button" data-prev>‹</button>
+          <button class="navBtn next" type="button" data-next>›</button>
+
+          <img src="images/projects/project1/bmw1.jpg" class="active" alt="BMW project photo 1">
+          <img src="images/projects/project1/bmw2.jpg" alt="BMW project photo 2">
+          <img src="images/projects/project1/bmw3.jpg" alt="BMW project photo 3">
+          <img src="images/projects/project1/audi1.jpg" alt="Audi project photo 1">
+          <img src="images/projects/project1/audi2.jpg" alt="Audi project photo 2">
+          <img src="images/projects/project1/audi3.jpg" alt="Audi project photo 3">
+
+          <div class="dots" data-dots></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Porsche Cayenne GTS</h2>
+        <p>Luxury detail for matte finish + interior care.</p>
+
+        <div class="slider" data-slider>
+          <button class="navBtn prev" type="button" data-prev>‹</button>
+          <button class="navBtn next" type="button" data-next>›</button>
+
+          <img src="images/projects/project2/porsche1.jpg" class="active" alt="Porsche project photo 1">
+          <img src="images/projects/project2/porsche2.jpg" alt="Porsche project photo 2">
+          <img src="images/projects/project2/porsche3.jpg" alt="Porsche project photo 3">
+          <img src="images/projects/project2/porsche4.jpg" alt="Porsche project photo 4">
+
+          <div class="dots" data-dots></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Mercedes GLE</h2>
+        <p>Deep interior cleaning + exterior gloss protection.</p>
+
+        <div class="slider" data-slider>
+          <button class="navBtn prev" type="button" data-prev>‹</button>
+          <button class="navBtn next" type="button" data-next>›</button>
+
+          <img src="images/projects/project3/mercedes1.jpg" class="active" alt="Mercedes project photo 1">
+          <img src="images/projects/project3/mercedes2.jpg" alt="Mercedes project photo 2">
+          <img src="images/projects/project3/mercedes3.jpg" alt="Mercedes project photo 3">
+          <img src="images/projects/project3/mercedes4.jpg" alt="Mercedes project photo 4">
+
+          <div class="dots" data-dots></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h2>Promo Video</h2>
+      <p>Short showcase of our detailing work.</p>
+
+      <div class="video-frame">
+        <video controls playsinline preload="metadata">
+          <source src="video/promo.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <p class="section-note" style="margin-top:12px;">
+        Want a quote? Use our <a href="contact.html">Contact form</a>.
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">© 2026 AutoDetail Pro — Premium Car Detailing</div>
+</footer>
+
+<script>
+function initSlider(slider) {
+  const imgs = Array.from(slider.querySelectorAll("img"));
+  const dotsWrap = slider.querySelector("[data-dots]");
+  let index = 0;
+
+  const dots = imgs.map((_, i) => {
+    const d = document.createElement("span");
+    d.className = "dot" + (i === 0 ? " active" : "");
+    d.addEventListener("click", () => show(i));
+    dotsWrap.appendChild(d);
+    return d;
+  });
+
+  function show(i) {
+    imgs[index].classList.remove("active");
+    dots[index].classList.remove("active");
+    index = (i + imgs.length) % imgs.length;
+    imgs[index].classList.add("active");
+    dots[index].classList.add("active");
+  }
+
+  slider.querySelector("[data-prev]").addEventListener("click", () => show(index - 1));
+  slider.querySelector("[data-next]").addEventListener("click", () => show(index + 1));
+}
+
+document.querySelectorAll("[data-slider]").forEach(initSlider);
+</script>
+
+</body>
+</html>

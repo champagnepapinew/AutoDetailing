@@ -1,0 +1,16 @@
+<svg width="260" height="60" viewBox="0 0 260 60" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Vertical accent bar -->
+  <rect x="0" y="12" width="4" height="36" fill="#e10600"></rect>
+
+  <!-- Main text -->
+  <text x="20" y="34" font-family="Montserrat, Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="700" letter-spacing="1.5">
+    AUTODETAIL
+  </text>
+
+  <!-- Sub text -->
+  <text x="20" y="50" font-family="Montserrat, Arial, sans-serif" font-size="13" fill="#e10600" font-weight="600" letter-spacing="4">
+    PRO
+  </text>
+
+</svg>
